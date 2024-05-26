@@ -1,0 +1,123 @@
+Assignment 2
+cd 
+Que 1)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls -lt
+total 28
+-rw-rw-r-- 1 sunbeam sunbeam 43 May 21 19:05 repeat.txt
+-rw-rw-r-- 1 sunbeam sunbeam 27 May 21 18:49 select.txt
+-rw-rw-r-- 1 sunbeam sunbeam 54 May 21 18:36 taste.txt
+-rw-rw-r-- 1 sunbeam sunbeam  0 May 21 18:25 kdac.txt
+-rw-rw-r-- 1 sunbeam sunbeam 68 May 21 18:00 error.txt
+-rw-rw-r-- 1 sunbeam sunbeam  0 May 21 18:00 output.txt
+-rw-rw-r-- 1 sunbeam sunbeam  7 May 21 18:00 input.txt
+-rw-rw-r-- 1 sunbeam sunbeam 50 May 21 17:40 sorted.txt
+-rw-rw-r-- 1 sunbeam sunbeam 50 May 21 17:35 numbers.txt
+
+Que 2)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls -lt
+total 28
+-rw-rw-r-- 1 sunbeam sunbeam 43 May 21 19:05 repeat.txt
+-rw-rw-r-- 1 sunbeam sunbeam 27 May 21 18:49 select.txt
+-rw-rw-r-- 1 sunbeam sunbeam 54 May 21 18:36 taste.txt
+-rw-rw-r-- 1 sunbeam sunbeam  0 May 21 18:25 kdac.txt
+-rw-rw-r-- 1 sunbeam sunbeam 68 May 21 18:00 error.txt
+-rw-rw-r-- 1 sunbeam sunbeam  0 May 21 18:00 output.txt
+-rw-rw-r-- 1 sunbeam sunbeam  7 May 21 18:00 input.txt
+-rw-rw-r-- 1 sunbeam sunbeam 50 May 21 17:40 sorted.txt
+-rw-rw-r-- 1 sunbeam sunbeam 50 May 21 17:35 numbers.txt
+
+Que 3)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls -i
+6967095 error.txt  6967090 numbers.txt  6967099 select.txt
+6967094 input.txt  6967096 output.txt   6967092 sorted.txt
+6967097 kdac.txt   6967100 repeat.txt   6967098 taste.txt
+
+
+Que 4)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ mkdir -p  india/maharashtra/mumbai/satara/karad
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls -R
+.:
+error.txt  input.txt  numbers.txt  repeat.txt  sorted.txt
+india      kdac.txt   output.txt   select.txt  taste.txt
+
+./india:
+maharashtra
+
+./india/maharashtra:
+mumbai
+
+./india/maharashtra/mumbai:
+satara
+
+./india/maharashtra/mumbai/satara:
+karad
+
+./india/maharashtra/mumbai/satara/karad:
+
+
+Que 5)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cat > name.txt
+sima katkar
+^C
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cat name.txt
+sima katkar
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cat >> name.txt
+A/P:vita , Tal:kanapur,dist:sangli
+^C
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cat name.txt
+sima katkar
+A/P:vita , Tal:kanapur,dist:sangli
+
+
+Que 6)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ touch file.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls
+error.txt  india      kdac.txt  numbers.txt  repeat.txt  sorted.txt
+file.txt   input.txt  name.txt  output.txt   select.txt  taste.txt
+
+7)mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+
+8)
+1)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls one/two/three/four/five
+555.txt  55.txt  5.txt
+
+2)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ echo "sima katkar" > one/two/three/four/44.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cat  one/two/three/four/44.txt
+sima katkar
+sunbeam@sunbeam-sima:~/OS&SDMLab$ 
+
+3)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ rm  one/two/three/four/five/555.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab$ ls one/two/three/four/five/
+55.txt  5.txt
+
+4)
+sunbeam@sunbeam-sima:~/OS&SDMLab$ cd one/two/three/four/five
+
+
+5)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five$ echo "operating system" >3.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five$ cat 3.txt
+operating system
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five$ 
+
+
+6)
+
