@@ -119,5 +119,123 @@ operating system
 sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five$ 
 
 
-6)
+6)list the contents of directory "two" from current directory (i.e. five).
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~$ cd one
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ cd two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ cd four
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four$ cd five
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four/five$ ls
+55.txt  5.txt
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four/five$ cd ..
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four$ cd ..
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ cd ..
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ ls
+222.txt  22.txt  2.txt  three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:
+
+7) remove file named "222.txt" which belongs to directory "two" from current directory (i.e. five)
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ ls
+222.txt  22.txt  2.txt  three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ rm 222.txt      //command
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ ls
+22.txt  2.txt  three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ 
+
+8) now change the directory to "one"
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd ..
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ ls
+111.txt  11.txt  1.txt  two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ 
+
+9)remove all files only from directory named "five" from current directory (i.e. one)
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~$ cd one
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ ls
+111.txt  11.txt  1.txt  two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ two/three/four/five/*
+bash: two/three/four/five/555.txt: Permission denied
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ rm two/three/four/five/*
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ ls
+111.txt  11.txt  1.txt  two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ cd two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ cd four
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four$ cd five
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four/five$ ls
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four/five$ 
+
+
+10) remove directory named "five" from current directory (i.e. one)
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~$ cd one
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ rm -r two/three/four/five
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ ls
+111.txt  11.txt  1.txt  two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ cd two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ cd four
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four$ cd five
+bash: cd: five: No such file or directory
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three/four$ 
+
+
+11) remove whole directory named "four" from current directory (i.e. one)
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~$ cd one 
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ cd two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd ..
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ rm -r two/three/four    //command
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ ls
+111.txt  11.txt  1.txt  two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one$ cd two
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two$ cd three
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ cd four
+bash: cd: four: No such file or directory
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ 
+
+12) change to your home directory.
+->>
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ ~    //command
+bash: /home/sima: Is a directory
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ 
+
+
+Q9. change the time stamp of file named "3.txt" which resides in directory named "three".(man touch)  //touch -t [[CC]YY]MMDDhhmm[.ss] filename//
+ANS)
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ ls
+333.txt  33.txt  3.txt
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ touch -t 202405211109.30 3.txt   //command
+sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:~/one/two/three$ stat 3.txt                       //output
+  File: 3.txt
+  Size: 21        	Blocks: 8          IO Block: 4096   regular file
+Device: 10309h/66313d	Inode: 9068226     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/ shivani)   Gid: ( 1000/ shivani)
+Access: 2024-05-21 11:09:30.000000000 +0530
+Modify: 2024-05-21 11:09:30.000000000 +0530
+Change: 2024-05-21 23:10:32.949552051 +0530
+ Birth: 2024-05-21 21:46:00.834007902 +0530
+ sunbeam@sunbeam-HP-Laptop-15s-eq2xxx:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
