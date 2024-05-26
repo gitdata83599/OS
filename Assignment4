@@ -1,0 +1,93 @@
+Assignment 4
+
+Que 1)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ cat > data.txt
+Linux is open source.
+In Linux everything is file
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+^C
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ cat data.txt
+Linux is open source.
+In Linux everything is file
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ wc -w -m -l data.txt
+  6  25 145 data.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ wc -l data.txt
+6 data.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ wc -m data.txt
+145 data.txt
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ wc -w data.txt
+
+2)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep -w "files" data.txt
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+
+3)
+there are several types of files
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep -w "file" data.txt
+In Linux everything is file
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep "files" data.txt
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+4)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep -v "files" data.txt
+Linux is open source.
+In Linux everything is file
+
+
+5)
+unbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep "have" data.txt
+files have permissions.
+files have inode no.
+files have size.
+
+
+6)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep "^f" data.txt
+files have permissions.
+files have inode no.
+files have size.
+
+7)
+unbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ grep "\.$" data.txt
+Linux is open source.
+files have permissions.
+files have inode no.
+files have size.
+
+8)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ head -2 data.txt
+Linux is open source.
+In Linux everything is file
+
+9)
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ tail -3 data.txt
+files have inode no.
+files have size.
+there are several types of files
+
+10)
+
+sunbeam@sunbeam-sima:~/OS&SDMLab/one/two/three/four/five/one/two/one$ head -n 5 data.txt | tail -n 3
+files have permissions.
+files have inode no.
+files have size.
+
+
+
+
+25 data.txt
+
